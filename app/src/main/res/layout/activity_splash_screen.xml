@@ -4,7 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".features.splashScreen.SplashScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+
+            android:layout_height="@dimen/_90sdp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ssem"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:textAlignment="center"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/primary"
+            android:text="Help Desk"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/smed"
+            android:layout_height="wrap_content"
+            android:text="@string/company_name"/>
+
+    </LinearLayout>
+
 
 </RelativeLayout>

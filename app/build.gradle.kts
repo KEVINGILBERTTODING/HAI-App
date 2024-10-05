@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -16,7 +18,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
-        dataBinding = true;
+        dataBinding = true
     }
 
     buildTypes {
@@ -51,7 +53,7 @@ dependencies {
     implementation("com.intuit.ssp:ssp-android:1.1.0")
     implementation("com.intuit.sdp:sdp-android:1.1.0")
 
-    // Retrofit
+    // Retrofit and Gson
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
@@ -60,12 +62,14 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.6.2")
     implementation("androidx.lifecycle:lifecycle-livedata:2.6.2")
     implementation("androidx.lifecycle:lifecycle-runtime:2.6.2")
-    implementation("com.google.dagger:hilt-android:2.48")
-    implementation("com.google.dagger:hilt-compiler:2.48")
 
-    // Glide
-    implementation("com.github.bumptech.glide:compiler:4.16.0")
-    implementation("jp.wasabeef:glide-transformations:4.3.0")
+    // Hilt (Dagger) for Java
+    implementation("com.google.dagger:hilt-android:2.48")
+    annotationProcessor("com.google.dagger:hilt-compiler:2.48") // Use annotationProcessor for Java
+
+    // Glide and transformations
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("jp.wasabeef:glide-transformations:4.3.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
 }

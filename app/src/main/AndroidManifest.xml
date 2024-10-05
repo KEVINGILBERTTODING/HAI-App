@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".core.di.module.app.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,14 +15,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".core.di.module.app.App"
         android:theme="@style/Theme.Hai"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity android:name=".features.splashScreen.SplashScreenActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".features.dashboard.user.ui.activities.UserDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.auth.ui.AuthActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".features.splashScreen.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

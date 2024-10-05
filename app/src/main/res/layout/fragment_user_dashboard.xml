@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.dashboard.user.ui.fragments.UserDashboardFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:background="@drawable/bg_header"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@id/ivPhotoProfile"
+                android:layout_marginRight="8dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/tvUsername"
+                    android:fontFamily="@font/sreg"
+                    android:textColor="@color/white"
+                    android:text="Hai" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/ssem"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:text="Dashboard" />
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivPhotoProfile"
+                android:layout_width="36dp"
+                android:src="@drawable/iv_profile"
+                android:layout_alignParentRight="true"
+                android:layout_height="36dp"/>
+
+
+        </RelativeLayout>
+        <!-- TODO: Update blank fragment layout -->
+
+
+    </RelativeLayout>
+</layout>
